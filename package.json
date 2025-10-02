@@ -1,0 +1,19 @@
+{
+  "name": "my-astro-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "private": true,
+  "dependencies": {
+    "@astrojs/vercel": "^8.2.8",
+    "@webtui/css": "^0.1.5",
+    "@webtui/theme-catppuccin": "^0.0.3",
+    "modern-normalize": "^3.0.1"
+  }
+}
