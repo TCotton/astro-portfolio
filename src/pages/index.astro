@@ -31,7 +31,7 @@ import AI from "../assets/icons8-ai.gif"
             <h2>TECH LEAD | FULL-STACK ENGINEER | AWS CERTIFIED EXPERT</h2>
             <div class="header">
             <span class="consultation" is-="badge" variant-="background0">
-                <button><a href="mailto:andy.walpole@gmail?subject=Contact from website">Book a consultation</a></button>
+                <a is-="button" href="mailto:andy.walpole@gmail?subject=Contact from website">Book a consultation</a>
             </span>
             </div>
         </div>
@@ -349,9 +349,6 @@ $baseFontSize: 62.5%;
     h2 {
         text-box: trim-start cap alphabetic;
     }
-    .wrapper > .header > h2 {
-        margin-bottom: 0.5lh;
-    }
 
     pre > span {
         color: var(--rosewater);
@@ -362,6 +359,32 @@ $baseFontSize: 62.5%;
         justify-content: flex-end;
         align-self:  flex-end;
     }
+
+        a {
+            color: rgb(from var(--mantle) R G B / 1);
+            -webkit-appearance: button;
+        }
+
+        a:link {
+            color: rgb(from var(--mantle) R G B / 1)
+        }
+
+        a:visited {
+            color: rgb(from var(--crust) R G B / 0.8)
+        }
+
+        a:focus {
+            color: rgb(from var(--crust) R G B / 1)
+        }
+
+        a:hover {
+            color: rgb(from var(--crust) R G B / 1)
+        }
+
+        a:active {
+            color: rgb(from var(--crust) R G B / 1)
+        }
+
 
 
 </style>
