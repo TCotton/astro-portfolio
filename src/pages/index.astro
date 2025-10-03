@@ -10,6 +10,7 @@ import LeadershipIcon from "../assets/images/icons8-leadership-250.png"
 import Performance from "../assets/images/icons8-performance-250.png"
 import Development from "../assets/images/icons8-google-code-250.png"
 import AI from "../assets/icons8-ai.gif"
+import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
@@ -94,7 +95,7 @@ import AI from "../assets/icons8-ai.gif"
                         <Image
                                 src={Development}
                                 widths={[50, 100, Development.width]}
-                                sizes={`(max-width: 800px) 50px, (max-width: max) 100px`}
+                                sizes={`(max-width: 800px) 50px, 100px`}
                                 alt="A description of my image."
                         />
                     </div>
@@ -160,6 +161,23 @@ import AI from "../assets/icons8-ai.gif"
                 </div>
                     <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize intelligent systems."</span> >> ai.txt</pre>
                 </article>
+
+                <article class="grid-item" box-="square" shear-="top">
+                    <div class="header">
+                        <span is-="badge" variant-="background0"><h2>Systems thinking</h2></span>
+                    </div>
+                    <div class="icon">
+                        <Image
+                                src={SystemsThinking}
+                                widths={[100, 200, SystemsThinking.width]}
+                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                                alt="A description of my image."
+                                inferSize="true"
+                        />
+                    </div>
+                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"Some text here about systems thinking"</span> >> ai.txt</pre>
+                </article>
+
             </section>
 
         </section>
@@ -384,6 +402,16 @@ $baseFontSize: 62.5%;
         a:active {
             color: rgb(from var(--crust) R G B / 1)
         }
+
+    @media (max-width: 800px) {
+        .icon > img {
+            width:100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+        }
+    }
 
 
 
