@@ -168,3 +168,4 @@ node_modules/
 .history/
 secret.json
 docker
+.vercel/
