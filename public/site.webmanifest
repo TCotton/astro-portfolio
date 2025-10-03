@@ -1,0 +1,29 @@
+{
+  "short_name": "Portfolio of Andrew Walpole",
+  "name": "Andrew Walpole - Tech Lead | Full-stack engineer | AWS certified expert
+   "icons": [
+      {
+        "src": "/web/icons8-software-engineering-solid-glyph-16.png",
+        "sizes": "16*16",
+        "type": "image/png"
+      },
+      {
+        "src": "/web/icons8-software-engineering-solid-glyph-32.png",
+        "sizes": "32*32",
+        "type": "image/png"
+      },
+      {
+        "src": "/web/icons8-software-engineering-solid-glyph-96.png",
+        "sizes": "96*96",
+        "type": "image/png"
+       },
+       {
+         "src": "web/icons8-software-engineering-solid-glyph-120.png",
+         "sizes": "120*120",
+         "type": "image/png"
+        },
+    ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}

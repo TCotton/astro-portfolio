@@ -15,5 +15,8 @@
     "@webtui/css": "^0.1.5",
     "@webtui/theme-catppuccin": "^0.0.3",
     "modern-normalize": "^3.0.1"
+  },
+  "devDependencies": {
+    "astro-seo": "^0.8.4"
   }
 }

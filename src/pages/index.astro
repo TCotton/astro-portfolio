@@ -1,5 +1,6 @@
 ---
 import {Image, Picture, getImage} from 'astro:assets';
+import { SEO } from "astro-seo";
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
@@ -16,11 +17,24 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
     some magic sprinkled in to help you build great templates. -->
 
 <html lang="en" data-webtui-theme="catppuccin-mocha">
-<meta charset="utf-8">
-<head>
+<head slot='head'>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<SEO
+        title="Andrew Walpole - Tech Lead | Full-stack engineer | AWS certified expert"
+        description="Andrew Walpole - Tech Lead | Full-stack engineer | AWS certified expert"
+        extend={{
+            link: [
+                { rel: "icon", type:'image/png', href:'/favicon.png' },
+                { rel: "icon", href: "/favicon.ico" },
+                { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+                { rel: "manifest", href: "/site.webmanifest" }
+                ]
+        }}
+/>
+
+<body slot='body'>
 <div>
     <div class="wrapper">
         <div is-="separator" direction-="horizontal"></div>
@@ -58,24 +72,26 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
 
                 <p>Most recently, I guided tech teams for NBrown’s SimplyBe and Castle projects.</p>
 
-            <ul>
-                <li>Positioned the fintech project, Castle, to launch with its first customers in January 2026.</li>
-                <li>Delivered full platform relaunch of Simply Be in the autumn of 2022; guided three cross-functional
-                    squads in creating a React.js/Next.js monorepo from several different repos, resulting in a
-                    successful
-                    go-live and improvements in platform performance and stability.
-                </li>
-                <li>The successful work on the “new web” and the Castle project directly lead to a £181m takeover of
-                    NBrown
-                    in December 2024.
-                </li>
-            </ul>
+                <ul>
+                    <li>Positioned the fintech project, Castle, to launch with its first customers in January 2026.</li>
+                    <li>Delivered full platform relaunch of Simply Be in the autumn of 2022; guided three
+                        cross-functional
+                        squads in creating a React.js/Next.js monorepo from several different repos, resulting in a
+                        successful
+                        go-live and improvements in platform performance and stability.
+                    </li>
+                    <li>The successful work on the “new web” and the Castle project directly lead to a £181m takeover of
+                        NBrown by a private consortium
+                        in December 2024.
+                    </li>
+                </ul>
 
-            <p>I was also pivotal in creating Elevaate, which secured £600k in funding and won Startup of the Year at
-                Retail
-                Week Live 2015.</p>
+                <p>I was also pivotal in creating Elevaate, which secured £600k in funding and won Startup of the Year
+                    at
+                    Retail
+                    Week Live 2015.</p>
 
-            <p>My experience spans all levels, from infrastructure to the browser</p>
+                <p>My experience spans all levels, from infrastructure to the browser</p>
             </div>
         </section>
 
@@ -94,9 +110,10 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                     <div class="icon">
                         <Image
                                 src={Development}
-                                widths={[50, 100, Development.width]}
-                                sizes={`(max-width: 800px) 50px, 100px`}
-                                alt="A description of my image."
+                                widths={[100, 200, Development.width]}
+                                in December 2024.
+                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                                alt="An icon for software development"
                         />
                     </div>
                     <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I craft comprehensive web solutions with a focus on user-centric design."</span> >> development.txt</pre>
@@ -110,7 +127,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                                 src={LeadershipIcon}
                                 widths={[100, 200, LeadershipIcon.width]}
                                 sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="A description of my image."
+                                alt="An icn for leadership"
                                 inferSize="true"
                         />
                     </div>
@@ -121,14 +138,14 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                         <span is-="badge" variant-="background0"><h2>AWS Certified Expert</h2></span>
                     </div>
                     <div class="icon">
-                <Image
-                        src={AWSIcon}
-                        widths={[100, 200, AWSIcon.width]}
-                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                        alt="A description of my image."
-                        inferSize="true"
-                />
-                </div>
+                        <Image
+                                src={AWSIcon}
+                                widths={[100, 200, AWSIcon.width]}
+                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                                alt="A icon for AWS"
+                                inferSize="true"
+                        />
+                    </div>
                     <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I design and implement serverless architectures using AWS for efficient integration."</span> >> infrastructure.txt</pre>
                 </article>
                 <article class="grid-item" box-="square" shear-="top">
@@ -136,14 +153,14 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                         <span is-="badge" variant-="background0"><h2>Frontend Optimization</h2></span>
                     </div>
                     <div class="icon">
-                <Image
-                        src={Performance}
-                        widths={[100, 200, Performance.width]}
-                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                        alt="A description of my image."
-                        inferSize="true"
-                />
-                </div>
+                        <Image
+                                src={Performance}
+                                widths={[100, 200, Performance.width]}
+                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                                alt="An icon for web performance"
+                                inferSize="true"
+                        />
+                    </div>
                     <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I enhance website performance through skilled frontend development practices."</span> >> performance.txt</pre>
                 </article>
                 <article class="grid-item" box-="square" shear-="top">
@@ -151,14 +168,14 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                         <span is-="badge" variant-="background0"><h2>AI development</h2></span>
                     </div>
                     <div class="icon">
-                <Image
-                        src={AIIcon}
-                        widths={[100, 200, AIIcon.width]}
-                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                        alt="A description of my image."
-                        inferSize="true"
-                />
-                </div>
+                        <Image
+                                src={AIIcon}
+                                widths={[100, 200, AIIcon.width]}
+                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                                alt="An icon for AI development."
+                                inferSize="true"
+                        />
+                    </div>
                     <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize intelligent systems."</span> >> ai.txt</pre>
                 </article>
 
@@ -171,7 +188,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                                 src={SystemsThinking}
                                 widths={[100, 200, SystemsThinking.width]}
                                 sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="A description of my image."
+                                alt="A description for systems thinking"
                                 inferSize="true"
                         />
                     </div>
@@ -321,6 +338,10 @@ $baseFontSize: 62.5%;
         padding: 0 2ch 0 2ch;
     }
 
+    .header h2 {
+        text-box: trim-both cap alphabetic;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(var(--item-width, 260px), 100%), 1fr));
@@ -375,9 +396,10 @@ $baseFontSize: 62.5%;
     .consultation {
         display: flex;
         justify-content: flex-end;
-        align-self:  flex-end;
+        align-self: flex-end;
     }
 
+    .wrapper > .header {
         a {
             color: rgb(from var(--mantle) R G B / 1);
             -webkit-appearance: button;
@@ -402,17 +424,17 @@ $baseFontSize: 62.5%;
         a:active {
             color: rgb(from var(--crust) R G B / 1)
         }
+    }
 
     @media (max-width: 800px) {
         .icon > img {
-            width:100%;
+            width: 100%;
             max-width: 300px;
             height: auto;
             margin: 0 auto;
             display: flex;
         }
     }
-
 
 
 </style>
