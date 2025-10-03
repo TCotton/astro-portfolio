@@ -1,14 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+import {Image, Picture, getImage} from 'astro:assets';
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
-import '../styles.css'
-import AWSIcon from "../images/icons8-aws.svg"
-import AIIcon from "../images/icons8-aws.gif"
-import LeadershipIcon from "../images/icons8-leadership.svg"
-import Performance from "../images/icons8-performance.svg"
-import Development from "../images/icons8-web-development.svg"
+import '../styles.css'///Applications/MAMP/htdocs/my-astro-project/src/assets
+import AIIcon from "../assets/images/icons8-ai.gif"
+import AWSIcon from "../assets/images/icons8-aws-240.png"
+import LeadershipIcon from "../assets/images/icons8-leadership-250.png"
+import Performance from "../assets/images/icons8-performance-250.png"
+import Development from "../assets/images/icons8-google-code-250.png"
+import AI from "../assets/icons8-ai.gif"
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
@@ -56,32 +57,70 @@ import Development from "../images/icons8-web-development.svg"
 
         <section class="grid">
             <article class="grid-item">
-            <h2>Full-Stack Development</h2>
-                <Image src="{Development.src}"
-                       width="{Development.width}"
-                       widths="{[100,200]}"
-                       alt="A description of my image"
+                <h2>Full-Stack Development</h2>
+                <span class="icon">
+                <Image
+                        src={Development}
+                        widths={[50, 100, Development.width]}
+                        sizes={`(max-width: 800px) 50px, (max-width: max) 100px`}
+                        alt="A description of my image."
                 />
-
-                <p>I craft comprehensive web solutions with a focus on user-centric design.</p>
+                </span>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo "I craft comprehensive web solutions with a focus on user-centric design." >> development.txt</pre>
             </article>
             <article class="grid-item">
-             <h2>Technical Leadership</h2>
-                <p>I lead teams to deliver high standards in technology projects</p>
+                <h2>Technical Leadership</h2>
+                <span class="icon">
+                <Image
+                        src={LeadershipIcon}
+                        widths={[100, 200, LeadershipIcon.width]}
+                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                        alt="A description of my image."
+                        inferSize="true"
+                />
+                </span>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo "I have lead multiple teams to deliver high standards in technology projects." >> leadership.txt</pre>
             </article>
             <article class="grid-item">
                 <h2>AWS Certified Expert</h2>
-                <p>I design and implement serverless architectures using AWS for efficient integration.</p>
+                <span class="icon">
+                <Image
+                        src={AWSIcon}
+                        widths={[100, 200, AWSIcon.width]}
+                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                        alt="A description of my image."
+                        inferSize="true"
+                />
+                </span>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo "I design and implement serverless architectures using AWS for efficient integration." >> infrastructure.txt</pre>
             </article>
             <article class="grid-item">
                 <h2>Frontend Optimization</h2>
-                <p>I enhance website performance through skilled frontend development practices.</p>
+                <span class="icon">
+                <Image
+                        src={Performance}
+                        widths={[100, 200, Performance.width]}
+                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                        alt="A description of my image."
+                        inferSize="true"
+                />
+                </span>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo "I enhance website performance through skilled frontend development practices." >> performance.txt</pre>
             </article>
             <article class="grid-item">
                 <h2>AI development</h2>
-                <p>With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize intelligent systems.</p>
+                <span class="icon">
+                <Image
+                        src={AIIcon}
+                        widths={[100, 200, AIIcon.width]}
+                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                        alt="A description of my image."
+                        inferSize="true"
+                />
+                </span>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo "With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize intelligent systems." >> ai.txt</pre>
             </article>
-         </section>
+        </section>
 
         <section>
 
@@ -175,12 +214,21 @@ $baseFontSize: 62.5%;
         grid-template-columns: repeat(auto-fit, minmax(min(var(--item-width, 200px), 100%), 1fr));
         grid-template-rows: masonry;
         grid-auto-flow: dense; /* Optional, but recommended */
-        gap: var(--gap, 1rem);
+        gap: var(--gap, 2ch);
     }
 
     .grid-item {
-        grid-row-end: var(--row-span, span 40)
-        padding-bottom: 40px
+        background-color: var(--item-bg, #f0f0f0);
+        grid-row-end: var(--row-span, span 0);
+        & .icon {
+            backround-color: black!important;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                padding: 5ch
+            }
+        }
     }
 
     img {
@@ -188,12 +236,13 @@ $baseFontSize: 62.5%;
         height: auto
     }
 
-    @media (max-width:800px) {
+    @media (max-width: 800px) {
         .grid {
             width: 90%;
             grid-template-columns: 1fr;
             grid-auto-rows: auto
         }
+
         .grid-item {
             grid-row-end: auto
         }

@@ -59,11 +59,22 @@
 }
 
 body {
+    /*
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    */
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    color: red;
+body {
+    /* only optimize text for headers due to performance issues */
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-kerning: auto;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p, span, a, li, td, th) {
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-feature-settings: "liga", "kern";
 }

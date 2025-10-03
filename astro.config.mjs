@@ -9,6 +9,5 @@ export default defineConfig({
         ssr: {
             noExternal: ['modern-normalize', '@webtui/css', '@webtui/theme-catppuccin']
         }
-    },
-    experimental: { assets: true }
+    }
 });
