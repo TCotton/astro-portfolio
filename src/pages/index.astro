@@ -24,11 +24,16 @@ import AI from "../assets/icons8-ai.gif"
     <div class="wrapper">
         <div is-="separator" direction-="horizontal"></div>
 
-        <div class="header" box-="square" shear-="top">
+        <div class="header" box-="double" shear-="both">
             <div class="header">
                 <span is-="badge" variant-="background0"><h1>ANDREW WALPOLE</h1></span>
             </div>
             <h2>TECH LEAD | FULL-STACK ENGINEER | AWS CERTIFIED EXPERT</h2>
+            <div class="header">
+            <span class="consultation" is-="badge" variant-="background0">
+                <button><a href="mailto:andy.walpole@gmail?subject=Contact from website">Book a consultation</a></button>
+            </span>
+            </div>
         </div>
 
         <div is-="separator" direction-="horizontal"></div>
@@ -52,9 +57,7 @@ import AI from "../assets/icons8-ai.gif"
 
                 <p>Most recently, I guided tech teams for NBrown’s SimplyBe and Castle projects.</p>
 
-            </div>
-
-            <ul marker-="pen tree open">
+            <ul>
                 <li>Positioned the fintech project, Castle, to launch with its first customers in January 2026.</li>
                 <li>Delivered full platform relaunch of Simply Be in the autumn of 2022; guided three cross-functional
                     squads in creating a React.js/Next.js monorepo from several different repos, resulting in a
@@ -72,6 +75,7 @@ import AI from "../assets/icons8-ai.gif"
                 Week Live 2015.</p>
 
             <p>My experience spans all levels, from infrastructure to the browser</p>
+            </div>
         </section>
 
         <div is-="separator" direction-="horizontal"></div>
@@ -81,42 +85,41 @@ import AI from "../assets/icons8-ai.gif"
 
             <div is-="separator" direction-="horizontal"></div>
 
-
             <section class="grid">
                 <article class="grid-item" box-="square" shear-="top">
                     <div class="header">
                         <span is-="badge" variant-="background0"> <h2>Full-Stack Development</h2></span>
                     </div>
-                    <span class="icon">
-                <Image
-                        src={Development}
-                        widths={[50, 100, Development.width]}
-                        sizes={`(max-width: 800px) 50px, (max-width: max) 100px`}
-                        alt="A description of my image."
-                />
-                </span>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo "I craft comprehensive web solutions with a focus on user-centric design." >> development.txt</pre>
+                    <div class="icon">
+                        <Image
+                                src={Development}
+                                widths={[50, 100, Development.width]}
+                                sizes={`(max-width: 800px) 50px, (max-width: max) 100px`}
+                                alt="A description of my image."
+                        />
+                    </div>
+                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I craft comprehensive web solutions with a focus on user-centric design."</span> >> development.txt</pre>
                 </article>
                 <article class="grid-item" box-="square" shear-="top">
                     <div class="header">
                         <span is-="badge" variant-="background0"><h2>Technical Leadership</h2></span>
                     </div>
-                    <span class="icon">
-                <Image
-                        src={LeadershipIcon}
-                        widths={[100, 200, LeadershipIcon.width]}
-                        sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                        alt="A description of my image."
-                        inferSize="true"
-                />
-                </span>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo "I have lead multiple teams to deliver high standards in technology projects." >> leadership.txt</pre>
+                    <div class="icon">
+                        <Image
+                                src={LeadershipIcon}
+                                widths={[100, 200, LeadershipIcon.width]}
+                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                                alt="A description of my image."
+                                inferSize="true"
+                        />
+                    </div>
+                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I have lead multiple teams to deliver high standards in technology projects."</span> >> leadership.txt</pre>
                 </article>
                 <article class="grid-item" box-="square" shear-="top">
                     <div class="header">
                         <span is-="badge" variant-="background0"><h2>AWS Certified Expert</h2></span>
                     </div>
-                    <span class="icon">
+                    <div class="icon">
                 <Image
                         src={AWSIcon}
                         widths={[100, 200, AWSIcon.width]}
@@ -124,14 +127,14 @@ import AI from "../assets/icons8-ai.gif"
                         alt="A description of my image."
                         inferSize="true"
                 />
-                </span>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo "I design and implement serverless architectures using AWS for efficient integration." >> infrastructure.txt</pre>
+                </div>
+                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I design and implement serverless architectures using AWS for efficient integration."</span> >> infrastructure.txt</pre>
                 </article>
                 <article class="grid-item" box-="square" shear-="top">
                     <div class="header">
                         <span is-="badge" variant-="background0"><h2>Frontend Optimization</h2></span>
                     </div>
-                    <span class="icon">
+                    <div class="icon">
                 <Image
                         src={Performance}
                         widths={[100, 200, Performance.width]}
@@ -139,14 +142,14 @@ import AI from "../assets/icons8-ai.gif"
                         alt="A description of my image."
                         inferSize="true"
                 />
-                </span>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo "I enhance website performance through skilled frontend development practices." >> performance.txt</pre>
+                </div>
+                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I enhance website performance through skilled frontend development practices."</span> >> performance.txt</pre>
                 </article>
                 <article class="grid-item" box-="square" shear-="top">
                     <div class="header">
                         <span is-="badge" variant-="background0"><h2>AI development</h2></span>
                     </div>
-                    <span class="icon">
+                    <div class="icon">
                 <Image
                         src={AIIcon}
                         widths={[100, 200, AIIcon.width]}
@@ -154,8 +157,8 @@ import AI from "../assets/icons8-ai.gif"
                         alt="A description of my image."
                         inferSize="true"
                 />
-                </span>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo "With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize intelligent systems." >> ai.txt</pre>
+                </div>
+                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize intelligent systems."</span> >> ai.txt</pre>
                 </article>
             </section>
 
@@ -170,6 +173,55 @@ import AI from "../assets/icons8-ai.gif"
 </body>
 </html>
 <style>
+    .wrapper {
+        margin: 0 auto;
+        padding: 2ch;
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 1lh;
+    }
+
+    li {
+        margin-bottom: 1lh;
+    }
+
+    @layer base {
+        :root {
+            [data-webtui-theme='catppuccin-*'] {
+                /* Accent Colors */
+                --rosewater: #f5e0dc;
+                --flamingo: #f2cdcd;
+                --pink: #f5c2e7;
+                --mauve: #cba6f7;
+                --red: #f38ba8;
+                --maroon: #eba0ac;
+                --peach: #fab387;
+                --yellow: #f9e2af;
+                --green: #a6e3a1;
+                --teal: #94e2d5;
+                --sky: #89dceb;
+                --sapphire: #74c7ec;
+                --blue: #89b4fa;
+                --lavender: #b4befe;
+
+                /* Background / Foreground Colors */
+                --text: #cdd6f4;
+                --subtext1: #bac2de;
+                --subtext0: #a6adc8;
+                --overlay2: #9399b2;
+                --overlay1: #7f849c;
+                --overlay0: #6c7086;
+                --surface2: #585b70;
+                --surface1: #45475a;
+                --surface0: #313244;
+                --base: #1e1e2e;
+                --mantle: #181825;
+                --crust: #11111b;
+            }
+        }
+    }
+
     /* Space Tokens */
     @layer base {
         :root {
@@ -241,15 +293,19 @@ $baseFontSize: 62.5%;
     }
 
     body > div > section {
-        --box-border-color: cyan;
+        --box-border-color: white;
         --box-rounded-radius: 8px;
         --box-border-width: 1px;
         --box-double-border-width: 1px;
     }
 
+    .wrapper > .header {
+        padding: 0 2ch 0 2ch;
+    }
+
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(var(--item-width, 250px), 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--item-width, 260px), 100%), 1fr));
         grid-template-rows: masonry;
         grid-auto-flow: dense; /* Optional, but recommended */
         gap: var(--gap, 2ch);
@@ -267,7 +323,7 @@ $baseFontSize: 62.5%;
                 width: 100%;
                 height: auto;
                 object-fit: contain;
-                padding: 1ch 6ch;
+                padding: 1ch 8ch;
                 filter: invert(1);
             }
         }
@@ -289,6 +345,24 @@ $baseFontSize: 62.5%;
             grid-row-end: auto
         }
     }
+
+    h2 {
+        text-box: trim-start cap alphabetic;
+    }
+    .wrapper > .header > h2 {
+        margin-bottom: 0.5lh;
+    }
+
+    pre > span {
+        color: var(--rosewater);
+    }
+
+    .consultation {
+        display: flex;
+        justify-content: flex-end;
+        align-self:  flex-end;
+    }
+
 
 </style>
 

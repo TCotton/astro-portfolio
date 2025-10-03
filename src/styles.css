@@ -330,6 +330,12 @@
     }
 }
 
+@layer base {
+    :root {
+        --line-height: 1.5;
+    }
+}
+
 body {
     /* only optimize text for headers due to performance issues */
     text-rendering: optimizeSpeed;
