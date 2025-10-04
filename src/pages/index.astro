@@ -10,8 +10,8 @@ import AWSIcon from "../assets/images/icons8-aws-240.png"
 import LeadershipIcon from "../assets/images/icons8-leadership-250.png"
 import Performance from "../assets/images/icons8-performance-250.png"
 import Development from "../assets/images/icons8-google-code-250.png"
-import AI from "../assets/icons8-ai.gif"
 import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
+import AppleIcon from "../assets/images/icons8-mac-300.png"
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
@@ -35,8 +35,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
 />
 
 <body slot='body'>
-<div>
-    <div class="wrapper">
+<div class="wrapper">
         <div is-="separator" direction-="horizontal"></div>
 
         <div class="header" box-="double" shear-="both">
@@ -111,7 +110,6 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                         <Image
                                 src={Development}
                                 widths={[100, 200, Development.width]}
-                                in December 2024.
                                 sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
                                 alt="An icon for software development"
                         />
@@ -203,7 +201,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
             <div class="header">
                 <span is-="badge" variant-="background0"><h1>Experience</h1></span>
             </div>
-            <ul>
+            <ul marker-="tree open">
                 <li>Full Stack Engineer SUBURBAN GLORY LTD 2025 - Present</li>
                 <li>Technical Lead / Full-stack Engineer N Brown Group 2021 - 2025</li>
                 <li>Lead Developer Leon Restaurants 2019 - 2020</li>
@@ -215,7 +213,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
                 <li>Developer Blinkbox (Tesco's) 2013 - 2014</li>
                 <li>Kaplan Developer 2014 - 2013</li>
                 <li>Developer Thomson Reuters 2012 - 2013</li>
-            </ul>
+            </>
             <div class="header">
             <span class="consultation" is-="badge" variant-="background0">
                 <a is-="button" href="https://www.linkedin.com/in/andrew-walpole-199044138/">See LinkedIn prolfile</a>
@@ -223,10 +221,32 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
             </div>
         </article>
 
-        <footer>Footer details here</footer>
+        <div is-="separator" direction-="horizontal"></div>
 
+        <section class="work-with-me" is-="typography-block" box-="square" shear-="top">
+            <div class="header">
+                <span is-="badge" variant-="background0"><h1>Work with me</h1></span>
+            </div>
+            <Image
+                    src={AppleIcon}
+                    alt="Apple icon"
+                    widths={[100, 480, Development.width]}
+                    sizes={`(max-width: 800px) 100px, (max-width: max) 480px`}
+                    inferSize="true"
+            />
+        </section>
+
+        <div is-="separator" direction-="horizontal"></div>
+
+        <footer is-="typography-block" box-="square" shear-="top">
+            <div class="header">
+                <span is-="badge" variant-="background0"><h1>Andrew Walpole</h1></span>
+            </div>
+            <p>I have a wealth of experience as a tech lead and full-stack developer.</p>
+        </footer>
+
+        <div is-="separator" direction-="horizontal"></div>
     </div>
-</div>
 </body>
 </html>
 <style>
@@ -279,75 +299,6 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
         }
     }
 
-    /* Space Tokens */
-    @layer base {
-        :root {
-            --step--5: clamp(0.3686rem, 0.6197rem + -0.324vw, 0.5549rem);
-            --step--4: clamp(0.4608rem, 0.6812rem + -0.2843vw, 0.6243rem);
-            --step--3: clamp(0.576rem, 0.7463rem + -0.2197vw, 0.7023rem);
-            --step--2: clamp(0.72rem, 0.8145rem + -0.122vw, 0.7901rem);
-            --step--1: clamp(0.8889rem, 0.885rem + 0.0193vw, 0.9rem);
-            --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
-            --step-1: clamp(1.125rem, 1.0272rem + 0.4891vw, 1.4063rem);
-            --step-2: clamp(1.2656rem, 1.0944rem + 0.856vw, 1.7578rem);
-            --step-3: clamp(1.4238rem, 1.1548rem + 1.3451vw, 2.1973rem);
-            --step-4: clamp(1.6018rem, 1.2036rem + 1.9909vw, 2.7466rem);
-            --step-5: clamp(1.802rem, 1.2347rem + 2.8369vw, 3.4332rem);
-            --step-6: clamp(2.0273rem, 1.2397rem + 3.9378vw, 4.2915rem);
-            --step-7: clamp(2.2807rem, 1.2081rem + 5.363vw, 5.3644rem);
-            --step-8: clamp(2.5658rem, 1.1259rem + 7.1995vw, 6.7055rem);
-
-            --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
-            --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
-            --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);--ƒspace-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
-            --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
-            --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
-            --space-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
-            --space-2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
-            --space-3xl: clamp(6rem, 5.7391rem + 1.3043vw, 6.75rem);
-
-
-            /**
-        $baseLineHeight: 2.5;
-$baseFontSize: 62.5%;
-         */
-            /* Flow Spacing */
-            --flow-space: var(--space-s);
-            --flow-space--medium: var(--space-xl);
-            --flow-space--large: var(--space-2xl);
-
-            --base-line-height: 2.5;
-            --base-font-size: 62.5%;
-        }
-    }
-
-    .content-flow > * + * {
-        margin-block-start: var(--flow-space);
-    }
-
-    .content-flow > * + :is(h1, h2, h3) {
-        margin-block-start: var(--flow-space--large);
-    }
-
-    .content-flow > * + .has-medium-flow-space,
-    .content-flow > .has-medium-flow-space + * {
-        margin-block-start: var(--flow-space--medium);
-    }
-
-    .content-flow > * + .has-large-flow-space,
-    .content-flow > .has-large-flow-space + * {
-        margin-block-start: var(--flow-space--large);
-    }
-
-
-    .left {
-        text-align: left;
-    }
-
-    .right {
-        text-align: right;
-    }
-
     body > div > section {
         --box-border-color: white;
         --box-rounded-radius: 8px;
@@ -355,8 +306,16 @@ $baseFontSize: 62.5%;
         --box-double-border-width: 1px;
     }
 
-    .wrapper > .header, .wrapper .experience {
+    .wrapper > .header  {
         padding: 0 2ch 0 2ch;
+    }
+
+    .wrapper .experience {
+        padding: 0 2ch 0 2ch;
+    }
+
+    .wrapper footer {
+        padding: 0 2ch 4ch 2ch;
     }
 
     .header h2 {
@@ -406,6 +365,26 @@ $baseFontSize: 62.5%;
         }
     }
 
+    @media (min-width: 801px) {
+        .work-with-me img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .work-with-me img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+        }
+    }
+
     h2 {
         text-box: trim-start cap alphabetic;
     }
@@ -420,7 +399,7 @@ $baseFontSize: 62.5%;
         align-self: flex-end;
     }
 
-    .wrapper > .header {
+    .wrapper > .header, .wrapper .experience {
         a {
             color: rgb(from var(--mantle) R G B / 1);
             -webkit-appearance: button;
