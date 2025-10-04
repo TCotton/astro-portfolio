@@ -51,9 +51,11 @@
           "key": "X-Permitted-Cross-Domain-Policies",
           "value": "none"
         },
-        {"key": "Cross-Origin-Opener-Policy",
+        {
+          "key": "Cross-Origin-Opener-Policy",
           "value": "same-origin"
         }
+      ]
     }
   ]
 }
