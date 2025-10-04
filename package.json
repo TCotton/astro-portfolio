@@ -17,6 +17,7 @@
     "modern-normalize": "^3.0.1"
   },
   "devDependencies": {
+    "@playform/compress": "0.2.0",
     "astro-seo": "^0.8.4"
   }
 }

@@ -199,9 +199,31 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
 
         </section>
 
-        <article is-="typography-block">
-            <h1>Experience</h1>
+        <article class="experience" is-="typography-block" box-="square" shear-="both">
+            <div class="header">
+                <span is-="badge" variant-="background0"><h1>Experience</h1></span>
+            </div>
+            <ul>
+                <li>Full Stack Engineer SUBURBAN GLORY LTD 2025 - Present</li>
+                <li>Technical Lead / Full-stack Engineer N Brown Group 2021 - 2025</li>
+                <li>Lead Developer Leon Restaurants 2019 - 2020</li>
+                <li>Lead Developer TELEGRAPH MEDIA GROUP LIMITED 2018 - 2018</li>
+                <li>Developer Aimia 2016 - 2017</li>
+                <li> Developer Boots 2015 - 2016</li>
+                <li>Developer Sainsburys 2014 - 2015</li>
+                <li>Developer Elevaate, Quotient Technology Inc. 2014 - 2014</li>
+                <li>Developer Blinkbox (Tesco's) 2013 - 2014</li>
+                <li>Kaplan Developer 2014 - 2013</li>
+                <li>Developer Thomson Reuters 2012 - 2013</li>
+            </ul>
+            <div class="header">
+            <span class="consultation" is-="badge" variant-="background0">
+                <a is-="button" href="https://www.linkedin.com/in/andrew-walpole-199044138/">See LinkedIn prolfile</a>
+            </span>
+            </div>
         </article>
+
+        <footer>Footer details here</footer>
 
     </div>
 </div>
@@ -217,7 +239,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
         margin-bottom: 1lh;
     }
 
-    li {
+    #header li {
         margin-bottom: 1lh;
     }
 
@@ -277,8 +299,7 @@ import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
 
             --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
             --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
-            --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
-            --space-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+            --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);--ƒspace-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
             --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
             --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
             --space-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
@@ -334,7 +355,7 @@ $baseFontSize: 62.5%;
         --box-double-border-width: 1px;
     }
 
-    .wrapper > .header {
+    .wrapper > .header, .wrapper .experience {
         padding: 0 2ch 0 2ch;
     }
 
