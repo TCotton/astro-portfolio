@@ -1,8 +1,6 @@
 ---
-import {Image, Picture, getImage} from 'astro:assets';
-import { SEO } from "astro-seo";
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
+import {Image} from 'astro:assets';
+import {SEO} from "astro-seo";
 console.log('This runs in your terminal, not the browser!');
 import '../styles.css'///Applications/MAMP/htdocs/my-astro-project/src/assets
 import AIIcon from "../assets/images/icons8-ai.gif"
@@ -12,6 +10,9 @@ import Performance from "../assets/images/icons8-performance-250.png"
 import Development from "../assets/images/icons8-google-code-250.png"
 import SystemsThinking from "../assets/images/icons8-system-thinking-200.png";
 import AppleIcon from "../assets/images/icons8-mac-300.png"
+import GitHubLogo from "../assets/svg/icons8-github-logo.svg"
+import StackOverFlowIcon from "../assets/svg/Stack_Overflow_icon.svg"
+import LinkedInIcon from "../assets/svg/icons8-linkedin.svg"
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
@@ -27,227 +28,238 @@ import AppleIcon from "../assets/images/icons8-mac-300.png"
         canonical="https://andywalpole.me"
         extend={{
             link: [
-                { rel: "icon", type:'image/png', href:'/favicon.png' },
-                { rel: "icon", href: "/favicon.ico" },
-                { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
-                { rel: "manifest", href: "/site.webmanifest" }
-                ]
+                {rel: "icon", type: 'image/png', href: '/favicon.png'},
+                {rel: "icon", href: "/favicon.ico"},
+                {rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180"},
+                {rel: "manifest", href: "/site.webmanifest"}
+            ]
         }}
 />
 
 <body slot='body'>
 <div class="wrapper">
-        <div is-="separator" direction-="horizontal"></div>
+    <div is-="separator" direction-="horizontal"></div>
 
-        <div class="header" box-="double" shear-="both">
-            <div class="header">
-                <span is-="badge" variant-="background0"><h1>ANDREW WALPOLE</h1></span>
-            </div>
-            <h2>TECH LEAD | FULL-STACK ENGINEER | AWS CERTIFIED EXPERT</h2>
-            <div class="header">
+    <div class="header" box-="double" shear-="both">
+        <div class="header">
+            <span is-="badge" variant-="background0"><h1>ANDREW WALPOLE</h1></span>
+        </div>
+        <h2>TECH LEAD | FULL-STACK ENGINEER | AWS CERTIFIED EXPERT</h2>
+        <div class="header">
             <span class="consultation" is-="badge" variant-="background0">
                 <a is-="button" href="mailto:andy.walpole@gmail?subject=Contact from website">Book a consultation</a>
             </span>
-            </div>
+        </div>
+    </div>
+
+    <div is-="separator" direction-="horizontal"></div>
+
+    <section box-="square" shear-="top">
+        <div class="header">
+            <span is-="badge" variant-="background0"><h1>Get future-ready</h1></span>
         </div>
 
-        <div is-="separator" direction-="horizontal"></div>
+        <div id="content">
+            <p>As a tech leader and engineer, I view programming as a product-centric activity. My expertise
+                encompasses both back-end and front-end development, emphasising serverless, event-driven
+                architecture and
+                systems thinking. On the front-end, I strive for solutions that combine accessibility, usability,
+                and
+                performance. I enthusiastically endorse The Agile Manifesto and the systems thinking and
+                domain-driven
+                approach now prevalent in our industry. Over my career, I’ve played instrumental roles in
+                significant retail
+                tech initiatives including projects for Tesco, Boots, and Sainsbury's.</p>
 
-        <section box-="square" shear-="top">
-            <div class="header">
-                <span is-="badge" variant-="background0"><h1>Get future-ready</h1></span>
-            </div>
+            <p>Most recently, I guided tech teams for NBrown’s SimplyBe and Castle projects.</p>
 
-            <div id="content">
-                <p>As a technology leader and engineer, I view programming as a product-centric activity. My expertise
-                    encompasses both back-end and front-end development, emphasising serverless, event-driven
-                    architecture and
-                    systems thinking. On the front-end, I strive for solutions that combine accessibility, usability,
-                    and
-                    performance. I enthusiastically endorse The Agile Manifesto and the systems thinking and
-                    domain-driven
-                    approach now prevalent in our industry. Over my career, I’ve played instrumental roles in
-                    significant retail
-                    tech initiatives including projects for Tesco, Boots, and Sainsbury's.</p>
+            <ul>
+                <li>Positioned the fintech project, Castle, to launch with its first customers in January 2026.</li>
+                <li>Delivered full platform relaunch of Simply Be in the autumn of 2022; guided three
+                    cross-functional
+                    squads in creating a React.js/Next.js monorepo from several different repos, resulting in a
+                    successful
+                    go-live and improvements in platform performance and stability.
+                </li>
+                <li>The successful work on the “new web” and the Castle project directly lead to a £181m takeover of
+                    NBrown by a private consortium
+                    in December 2024.
+                </li>
+            </ul>
 
-                <p>Most recently, I guided tech teams for NBrown’s SimplyBe and Castle projects.</p>
+            <p>I was also pivotal in creating Elevaate, which secured £600k in funding and won Startup of the Year
+                at
+                Retail
+                Week Live 2015.</p>
 
-                <ul>
-                    <li>Positioned the fintech project, Castle, to launch with its first customers in January 2026.</li>
-                    <li>Delivered full platform relaunch of Simply Be in the autumn of 2022; guided three
-                        cross-functional
-                        squads in creating a React.js/Next.js monorepo from several different repos, resulting in a
-                        successful
-                        go-live and improvements in platform performance and stability.
-                    </li>
-                    <li>The successful work on the “new web” and the Castle project directly lead to a £181m takeover of
-                        NBrown by a private consortium
-                        in December 2024.
-                    </li>
-                </ul>
+            <p>My experience spans all levels, from infrastructure to the browser</p>
+        </div>
+    </section>
 
-                <p>I was also pivotal in creating Elevaate, which secured £600k in funding and won Startup of the Year
-                    at
-                    Retail
-                    Week Live 2015.</p>
+    <div is-="separator" direction-="horizontal"></div>
 
-                <p>My experience spans all levels, from infrastructure to the browser</p>
-            </div>
-        </section>
+    <section>
+        <h1>Services Offered</h1>
 
         <div is-="separator" direction-="horizontal"></div>
 
-        <section>
-            <h1>Services Offered</h1>
+        <section class="grid">
+            <article class="grid-item" box-="square" shear-="top">
+                <div class="header">
+                    <span is-="badge" variant-="background0"> <h2>Full-Stack Development</h2></span>
+                </div>
+                <div class="icon">
+                    <Image
+                            src={Development}
+                            widths={[100, 200, Development.width]}
+                            sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                            alt="An icon for software development"
+                    />
+                </div>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I craft comprehensive web solutions with a focus on user-centric design."</span> >> development.txt</pre>
+            </article>
+            <article class="grid-item" box-="square" shear-="top">
+                <div class="header">
+                    <span is-="badge" variant-="background0"><h2>Technical Leadership</h2></span>
+                </div>
+                <div class="icon">
+                    <Image
+                            src={LeadershipIcon}
+                            widths={[100, 200, LeadershipIcon.width]}
+                            sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                            alt="An icn for leadership"
+                            inferSize="true"
+                    />
+                </div>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I have lead multiple teams to deliver high standards in technology projects."</span> >> leadership.txt</pre>
+            </article>
+            <article class="grid-item" box-="square" shear-="top">
+                <div class="header">
+                    <span is-="badge" variant-="background0"><h2>AWS Certified Expert</h2></span>
+                </div>
+                <div class="icon">
+                    <Image
+                            src={AWSIcon}
+                            widths={[100, 200, AWSIcon.width]}
+                            sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                            alt="A icon for AWS"
+                            inferSize="true"
+                    />
+                </div>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I design and implement serverless architectures using AWS for efficient integration."</span> >> infrastructure.txt</pre>
+            </article>
+            <article class="grid-item" box-="square" shear-="top">
+                <div class="header">
+                    <span is-="badge" variant-="background0"><h2>Frontend Optimisation</h2></span>
+                </div>
+                <div class="icon">
+                    <Image
+                            src={Performance}
+                            widths={[100, 200, Performance.width]}
+                            sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                            alt="An icon for web performance"
+                            inferSize="true"
+                    />
+                </div>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I enhance website performance through frontend development best practices."</span> >> performance.txt</pre>
+            </article>
+            <article class="grid-item" box-="square" shear-="top">
+                <div class="header">
+                    <span is-="badge" variant-="background0"><h2>AI development</h2></span>
+                </div>
+                <div class="icon">
+                    <Image
+                            src={AIIcon}
+                            widths={[100, 200, AIIcon.width]}
+                            sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                            alt="An icon for AI development."
+                            inferSize="true"
+                    />
+                </div>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize AI workflows."</span> >> ai.txt</pre>
+            </article>
 
-            <div is-="separator" direction-="horizontal"></div>
-
-            <section class="grid">
-                <article class="grid-item" box-="square" shear-="top">
-                    <div class="header">
-                        <span is-="badge" variant-="background0"> <h2>Full-Stack Development</h2></span>
-                    </div>
-                    <div class="icon">
-                        <Image
-                                src={Development}
-                                widths={[100, 200, Development.width]}
-                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="An icon for software development"
-                        />
-                    </div>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I craft comprehensive web solutions with a focus on user-centric design."</span> >> development.txt</pre>
-                </article>
-                <article class="grid-item" box-="square" shear-="top">
-                    <div class="header">
-                        <span is-="badge" variant-="background0"><h2>Technical Leadership</h2></span>
-                    </div>
-                    <div class="icon">
-                        <Image
-                                src={LeadershipIcon}
-                                widths={[100, 200, LeadershipIcon.width]}
-                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="An icn for leadership"
-                                inferSize="true"
-                        />
-                    </div>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I have lead multiple teams to deliver high standards in technology projects."</span> >> leadership.txt</pre>
-                </article>
-                <article class="grid-item" box-="square" shear-="top">
-                    <div class="header">
-                        <span is-="badge" variant-="background0"><h2>AWS Certified Expert</h2></span>
-                    </div>
-                    <div class="icon">
-                        <Image
-                                src={AWSIcon}
-                                widths={[100, 200, AWSIcon.width]}
-                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="A icon for AWS"
-                                inferSize="true"
-                        />
-                    </div>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I design and implement serverless architectures using AWS for efficient integration."</span> >> infrastructure.txt</pre>
-                </article>
-                <article class="grid-item" box-="square" shear-="top">
-                    <div class="header">
-                        <span is-="badge" variant-="background0"><h2>Frontend Optimisation</h2></span>
-                    </div>
-                    <div class="icon">
-                        <Image
-                                src={Performance}
-                                widths={[100, 200, Performance.width]}
-                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="An icon for web performance"
-                                inferSize="true"
-                        />
-                    </div>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"I enhance website performance through frontend development best practices."</span> >> performance.txt</pre>
-                </article>
-                <article class="grid-item" box-="square" shear-="top">
-                    <div class="header">
-                        <span is-="badge" variant-="background0"><h2>AI development</h2></span>
-                    </div>
-                    <div class="icon">
-                        <Image
-                                src={AIIcon}
-                                widths={[100, 200, AIIcon.width]}
-                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="An icon for AI development."
-                                inferSize="true"
-                        />
-                    </div>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"With extensive experience in AI development, I have worked with a wide range of modern tools and frameworks to design, build, and optimize AI workflows."</span> >> ai.txt</pre>
-                </article>
-
-                <article class="grid-item" box-="square" shear-="top">
-                    <div class="header">
-                        <span is-="badge" variant-="background0"><h2>Systems thinking</h2></span>
-                    </div>
-                    <div class="icon">
-                        <Image
-                                src={SystemsThinking}
-                                widths={[100, 200, SystemsThinking.width]}
-                                sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
-                                alt="A description for systems thinking"
-                                inferSize="true"
-                        />
-                    </div>
-                    <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"System thinking requires a holistic view of a software project, using practices such as system lens' to document emergent behaviour"</span> >> system.txt</pre>
-                </article>
-
-            </section>
+            <article class="grid-item" box-="square" shear-="top">
+                <div class="header">
+                    <span is-="badge" variant-="background0"><h2>Systems thinking</h2></span>
+                </div>
+                <div class="icon">
+                    <Image
+                            src={SystemsThinking}
+                            widths={[100, 200, SystemsThinking.width]}
+                            sizes={`(max-width: 800px) 100px, (max-width: max) 200px`}
+                            alt="A description for systems thinking"
+                            inferSize="true"
+                    />
+                </div>
+                <pre>andywalpole@Andys-IMac-5 portfolio % echo <span>"System thinking requires a holistic view of a software project, using practices such as system lens' to document emergent behaviour"</span> >> system.txt</pre>
+            </article>
 
         </section>
 
-        <article class="experience" is-="typography-block" box-="square" shear-="both">
-            <div class="header">
-                <span is-="badge" variant-="background0"><h1>Experience</h1></span>
-            </div>
-            <ul marker-="tree open">
-                <li>Full Stack Engineer SUBURBAN GLORY LTD 2025 - Present</li>
-                <li>Technical Lead / Full-stack Engineer N Brown Group 2021 - 2025</li>
-                <li>Lead Developer Leon Restaurants 2019 - 2020</li>
-                <li>Lead Developer TELEGRAPH MEDIA GROUP LIMITED 2018 - 2018</li>
-                <li>Developer Aimia 2016 - 2017</li>
-                <li> Developer Boots 2015 - 2016</li>
-                <li>Developer Sainsburys 2014 - 2015</li>
-                <li>Developer Elevaate, Quotient Technology Inc. 2014 - 2014</li>
-                <li>Developer Blinkbox (Tesco's) 2013 - 2014</li>
-                <li>Kaplan Developer 2014 - 2013</li>
-                <li>Developer Thomson Reuters 2012 - 2013</li>
-            </>
-            <div class="header">
-            <span class="consultation" is-="badge" variant-="background0">
-                <a is-="button" href="https://www.linkedin.com/in/andrew-walpole-199044138/">See LinkedIn profile</a>
-            </span>
-            </div>
+    </section>
+
+    <article class="experience" is-="typography-block" box-="square" shear-="both">
+        <div class="header">
+            <span is-="badge" variant-="background0"><h1>Experience</h1></span>
+        </div>
+        <ul marker-="tree open">
+            <li>Full Stack Engineer SUBURBAN GLORY LTD 2025 - Present</li>
+            <li>Technical Lead / Full-stack Engineer N Brown Group 2021 - 2025</li>
+            <li>Lead Developer Leon Restaurants 2019 - 2020</li>
+            <li>Lead Developer TELEGRAPH MEDIA GROUP LIMITED 2018 - 2018</li>
+            <li>Developer Aimia 2016 - 2017</li>
+            <li> Developer Boots 2015 - 2016</li>
+            <li>Developer Sainsburys 2014 - 2015</li>
+            <li>Developer Elevaate, Quotient Technology Inc. 2014 - 2014</li>
+            <li>Developer Blinkbox (Tesco's) 2013 - 2014</li>
+            <li>Kaplan Developer 2014 - 2013</li>
+            <li>Developer Thomson Reuters 2012 - 2013</li>
+        </ul>
+    </article>
+
+    <div is-="separator" direction-="horizontal"></div>
+
+    <section class="work-with-me" is-="typography-block" box-="square" shear-="top">
+        <div class="header">
+            <span is-="badge" variant-="background0"><h1>Work with me</h1></span>
+        </div>
+        <Image
+                src={AppleIcon}
+                alt="Apple icon"
+                widths={[100, 480, Development.width]}
+                sizes={`(max-width: 800px) 100px, (max-width: max) 480px`}
+                inferSize="true"
+        />
+    </section>
+
+    <section class="external-links" is-="typography-block" box-="square" shear-="top">
+        <div class="header">
+            <span is-="badge" variant-="background0"><h1>Links</h1></span>
+        </div>
+        <article>
+            <a href="https://www.linkedin.com/in/andrew-walpole-199044138/" rel="external">
+                <LinkedInIcon/>
+            </a>
+            <a href="https://github.com/TCotton/" rel="external">
+                <GitHubLogo width="144" height="144" alt="GitHub logo"/>
+            </a>
+            <a href="https://stackoverflow.com/users/315350/andyw" rel="external">
+                <StackOverFlowIcon width="144" height="144" alt="Stack Overflow logo"/>
         </article>
+    </section>
 
-        <div is-="separator" direction-="horizontal"></div>
+    <div is-="separator" direction-="horizontal"></div>
 
-        <section class="work-with-me" is-="typography-block" box-="square" shear-="top">
-            <div class="header">
-                <span is-="badge" variant-="background0"><h1>Work with me</h1></span>
-            </div>
-            <Image
-                    src={AppleIcon}
-                    alt="Apple icon"
-                    widths={[100, 480, Development.width]}
-                    sizes={`(max-width: 800px) 100px, (max-width: max) 480px`}
-                    inferSize="true"
-            />
-        </section>
+    <footer is-="typography-block" box-="square" shear-="top">
+        <div class="header">
+            <span is-="badge" variant-="background0"><h1>Andrew Walpole</h1></span>
+        </div>
+        <p>I have a wealth of experience as a tech lead and full-stack developer.</p>
+    </footer>
 
-        <div is-="separator" direction-="horizontal"></div>
-
-        <footer is-="typography-block" box-="square" shear-="top">
-            <div class="header">
-                <span is-="badge" variant-="background0"><h1>Andrew Walpole</h1></span>
-            </div>
-            <p>I have a wealth of experience as a tech lead and full-stack developer.</p>
-        </footer>
-
-        <div is-="separator" direction-="horizontal"></div>
-    </div>
+    <div is-="separator" direction-="horizontal"></div>
+</div>
 </body>
 </html>
 <style>
@@ -307,7 +319,7 @@ import AppleIcon from "../assets/images/icons8-mac-300.png"
         --box-double-border-width: 1px;
     }
 
-    .wrapper > .header  {
+    .wrapper > .header {
         padding: 0 2ch 0 2ch;
     }
 
@@ -427,7 +439,39 @@ import AppleIcon from "../assets/images/icons8-mac-300.png"
         }
     }
 
-    @media (max-width: 800px) {
+    .external-links {
+        a {
+            color: transparent;
+            -webkit-appearance: none;
+
+            svg {
+                transition-property: transform;
+                transition-duration: 1s;
+            }
+        }
+
+        a:hover, a:active {
+            svg {
+                transform: scale(1.1);
+            }
+        }
+
+        article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .external-links {
+            article {
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
         .icon > img {
             width: 100%;
             max-width: 300px;
